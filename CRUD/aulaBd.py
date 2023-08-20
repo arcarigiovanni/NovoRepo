@@ -2,10 +2,10 @@ import sqlite3
 
 conexao = sqlite3.connect("aula.db")
 
-conexao.execute(''' CREATE TABLE IF NOT EXISTS aluno
-                ( id INTEGER PRIMARY KEY AUTOINCREMENT,
-                nome TEXT NOT NULL,
-                idade INT NOT NULL);''')
+# conexao.execute(''' CREATE TABLE IF NOT EXISTS aluno
+#                 ( id INTEGER PRIMARY KEY AUTOINCREMENT,
+#                 nome TEXT NOT NULL,
+#                 idade INT NOT NULL);''')
 
 def cria_aluno(nome, idade):
     sqlQuery = "INSERT INTO aluno(nome, idade) VALUES ('{}', {})".format(nome, idade) #se for string é melhor usar as aspas simples antes das chaves
